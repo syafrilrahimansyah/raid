@@ -160,4 +160,5 @@ class Test extends CI_Controller {
 		}
 		print_r($a);
 	}
+	//i add new function
 }
