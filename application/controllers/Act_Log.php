@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Act_Log extends CI_Controller {
+	//adjust ubuntu
 	public function __construct()
 	{
     parent::__construct();
