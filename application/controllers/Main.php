@@ -67,7 +67,15 @@ class Main extends CI_Controller {
 					else{
 						$header = array();
 					}
-
+					
+					// X SIGNATURE
+					if($_POST[$fltr]=='prod'){
+						$sig = md5('mdcshbkqcbkn3wtqjnvcrrwu'.'r4IDt53L95'.gmdate('U'));
+					}else{
+						$sig = md5('qw6avppx5pk9zpcn8d65skhf'.'3pCr41DOk3'.gmdate('U'));
+					}
+					$header[] = 'x-signature: '.$sig;
+					
 					//get url value ($url->value)
 					$url_data = [
 						'act_id'=>$_POST['act_id'],
@@ -209,6 +217,13 @@ class Main extends CI_Controller {
 				else{
 					$header = array();
 				}
+				// X SIGNATURE
+				if($_POST[$fltr]=='prod'){
+					$sig = md5('mdcshbkqcbkn3wtqjnvcrrwu'.'r4IDt53L95'.gmdate('U'));
+				}else{
+					$sig = md5('qw6avppx5pk9zpcn8d65skhf'.'3pCr41DOk3'.gmdate('U'));
+				}
+				$header[] = 'x-signature: '.$sig;
 				//get url value ($url->value)
 				$url_data = [
 					'act_id'=>$_POST['act_id'],
@@ -334,6 +349,13 @@ class Main extends CI_Controller {
 				else{
 					$header = array();
 				}
+				// X SIGNATURE
+				if($_POST[$fltr]=='prod'){
+					$sig = md5('mdcshbkqcbkn3wtqjnvcrrwu'.'r4IDt53L95'.gmdate('U'));
+				}else{
+					$sig = md5('qw6avppx5pk9zpcn8d65skhf'.'3pCr41DOk3'.gmdate('U'));
+				}
+				$header[] = 'x-signature: '.$sig;
 				//get url value ($url->value)
 				$url_data = [
 					'act_id'=>$_POST['act_id'],
@@ -463,6 +485,13 @@ class Main extends CI_Controller {
 				else{
 					$header = array();
 				}
+				// X SIGNATURE
+				if($_POST[$fltr]=='prod'){
+					$sig = md5('mdcshbkqcbkn3wtqjnvcrrwu'.'r4IDt53L95'.gmdate('U'));
+				}else{
+					$sig = md5('qw6avppx5pk9zpcn8d65skhf'.'3pCr41DOk3'.gmdate('U'));
+				}
+				$header[] = 'x-signature: '.$sig;
 				//get url value ($url->value)
 				$url_data = [
 					'act_id'=>$_POST['act_id'],
